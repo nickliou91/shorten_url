@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Sinatra Shorten URLs Service</h1>
+
+  <form action="/" method="POST">
+  URL: <input type="text" name="orginal_url"> 
+ <input type="Submit" name="submit" >
+</form>
+  
+</div>
+<p> <%= @error %> </p>
+
+<% @url.each do |u| %>
+
+   
+   <p> <a href='/<%= "#{u.shorten_url}" %>' > localhost:9393/<%= u.shorten_url%> </a> </p>
+   <p> <%= u.visit_counts %> </p>
+
+<% end %>

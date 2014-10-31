@@ -1,0 +1,26 @@
+<div style= "margin:100px 200px"> 
+	<table border ="1">
+			<tr>
+					<td width="30px"> ID </td>
+					<td width="200px"> Original URL</td>
+					<td width ="150px">Shorten URL</td>
+					<td width = "50px">Visit Count </td>
+					<td width = "150px"> Created at </td>
+			</tr>
+			<% @url.each do |u| %>
+				<tr>
+				<td width="30px"> <%= u.id %> </td>
+				<td width="200px"> <%= u.orginal_url%> </td>
+				<td width="150px"> <%= u.shorten_url %> </td>
+				<td width="50px"> <%= u.visit_counts %> </td>
+				<td width="150px"> <%= u.created_at %> </td>
+			</tr>	
+				<% end %>
+			</table>
+
+</div>
+
+
+
+
+
